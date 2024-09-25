@@ -41,16 +41,16 @@ Hay 6 tipos diferentes de servicio:
    - NE - Actividad por Acciones (stock exchange)
    - NW - Cliente potencial (prospecto) solicitando información
    - TT – clientes que dejan un mensaje pidiendo al banco que le devuelvan su llamado pero que cuando el sistema automático devuelve el llamado, el agente pasó a estado “ocupado”, dejando al cliente en espera en la cola.
-6. **Date** - 6 dígitos <br>
-año-mes-día
+6. **Date** - 6 dígitos (año-mes-día) <br>
+La fecha en la cual se realizó la llamada.
 7. **vru_entry** - 6 dígitos <br>
-Hora en que la llamada telefónica ingresa al call center. Más específicamente, cada cliente que llama debe identificarse primero lo que se realiza proporcionando a la VRU la ID del cliente. Por lo tanto, esta es la hora en que la llamada ingresa a la VRU.
+Hora en que la llamada telefónica ingresa al call center. Es decir, la hora en que la llamada ingresa a la VRU.
 8. **vru_exit** - 6 dígitos <br>
 Hora de salida de la VRU: 
 9. **vru_time** - 1 a 3 dígitos <br>
 Tiempo (en segundos) de espera en la VRU (calculada como vru_time= exit_time – entry_time) .
 10. **q_start** - 6 dígitos <br>
-Hora en la que se une a la cola. (la llamada queda “en espera”). Este valor es 00:00:00, para clientes que llegan a ponerse en la cola (abandonan cuando están en la VRU).
+Hora en la que se une a la cola. (la llamada queda “en espera”).
 11. **q_exit** - 6 digits <br>
 Tiempo (en segundos) en salir de la cola: ya sea porque recibe el servicio o por qué abandona el llamado.
 12. **q_time** - 1 to 3 digitos <br>
@@ -59,13 +59,12 @@ Tiempo de espera en la cola (calculado por q_time = q_exit – q_start)
 Hay tres posibles salidas por cada llamada:
     - AGENT: se dio servicio
     - HANG: se cortó la llamada y no se dió servicio
-    - PHANTOM: una llamada en la que virtualmente se ignora lo que sucedió(afortu- nadamente son pocas llamadas en esta situación).
+    - PHANTOM: una llamada en la que virtualmente se ignora lo que sucedió(afortunadamente son pocas llamadas en esta situación).
 14. **ser_start** - 6 digitos <br>
 Hora de comienzo del servicio por un agente.
 15. **ser_exit** - 6 digitos <br>
-Hora del servicio del servicio por un agente.
+Hora del final del servicio por un agente.
 16. **ser_time** - 1 to 3 digitos <br>
 Duración del servicio en segundos (calculada como ser_time = ser_exit – ser_start)
 17. **Server** - text <br>
 Nombre del cliente que atendió la llamada. Este campo es NO_SERVER, si el servicio no fue provisto.
-
