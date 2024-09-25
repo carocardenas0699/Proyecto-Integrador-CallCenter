@@ -25,15 +25,15 @@ El dataset contiene toda la información del Call Centre de un año calendario: 
 
 1. **vru_line** - 6 dígitos <br>
 Cada llamada telefónica entrante es ruteada a través del VRU. Hay 6 VRUs etiquetados desde  AA01 a AA06. Cada VRU tiene varias líneas etiquetadas de 1 a 16. Hay un total de 65 líneas. Cada llamada es asignada a un número de VRU y a un número de línea.
-2. **Call_id** - 5 dígitos <br>
+2. **call_id** - 5 dígitos <br>
 A cada llamada telefónica entrante se le asigna un “call id”. Aunque son diferentes, los identificadores no son necesariamente consecutivos por estar asignado a diferentes VRUs.
-3. **Customer_id** - 0 a 12 dígitos <br>
+3. **customer_id** - 0 a 12 dígitos <br>
 Es la identificación del cliente. Es única por cliente; si el ID es cero, es porque el sistema no pudo identificar a la persona que realiza la llamada (por ejemplo para el caso de los prospectos no se identifican).
-4. **Priority** - 1 digito <br>
+4. **priority** - 1 digito <br>
 Hay dos tipos de prioridades: (Alta-)prioridad y Regular:
    - 0 y 1 indican clientes no identificados o clientes regulares (los detallaremos más adelante)
    - 2 indica clientes de Alta Prioridad. A los clientes de Alta Prioridad se les asigna un tiempo de espera de 1.5 minutos al comienzo de su llamada (esto les permite avanzar en la posición de la cola de llamadas).
-5. **Type** - 2 digits <br>
+5. **type** - 2 digits <br>
 Hay 6 tipos diferentes de servicio:
    - PS - Actividad Regular
    - PE - Actividad Regular en inglés
@@ -41,7 +41,7 @@ Hay 6 tipos diferentes de servicio:
    - NE - Actividad por Acciones (stock exchange)
    - NW - Cliente potencial (prospecto) solicitando información
    - TT – clientes que dejan un mensaje pidiendo al banco que le devuelvan su llamado pero que cuando el sistema automático devuelve el llamado, el agente pasó a estado “ocupado”, dejando al cliente en espera en la cola.
-6. **Date** - 6 dígitos (año-mes-día) <br>
+6. **date** - 6 dígitos (año-mes-día) <br>
 La fecha en la cual se realizó la llamada.
 7. **vru_entry** - 6 dígitos <br>
 Hora en que la llamada telefónica ingresa al call center. Es decir, la hora en que la llamada ingresa a la VRU.
@@ -55,16 +55,16 @@ Hora en la que se une a la cola. (la llamada queda “en espera”).
 Tiempo (en segundos) en salir de la cola: ya sea porque recibe el servicio o por qué abandona el llamado.
 12. **q_time** - 1 to 3 digitos <br>
 Tiempo de espera en la cola (calculado por q_time = q_exit – q_start)
-13. **Outcome** - 4,5 o 7 digitos <br>
-Hay tres posibles salidas por cada llamada:
+13. **outcome** - 4,5 o 7 digitos <br>
+Destino final de la llamada. Hay tres posibles salidas por cada llamada:
     - AGENT: se dio servicio
     - HANG: se cortó la llamada y no se dió servicio
-    - PHANTOM: una llamada en la que virtualmente se ignora lo que sucedió(afortunadamente son pocas llamadas en esta situación).
+    - PHANTOM: una llamada en la que virtualmente se ignora lo que sucedió (afortunadamente son pocas llamadas en esta situación).
 14. **ser_start** - 6 digitos <br>
 Hora de comienzo del servicio por un agente.
 15. **ser_exit** - 6 digitos <br>
 Hora del final del servicio por un agente.
 16. **ser_time** - 1 to 3 digitos <br>
 Duración del servicio en segundos (calculada como ser_time = ser_exit – ser_start)
-17. **Server** - text <br>
+17. **server** - text <br>
 Nombre del cliente que atendió la llamada. Este campo es NO_SERVER, si el servicio no fue provisto.
