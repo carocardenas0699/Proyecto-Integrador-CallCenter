@@ -18,7 +18,7 @@ $\text{Porcentaje [outcome=AGENT]}= 81.89%$ <br>
 - **Proporción de tiempo en cola de clientes de proporción Alta vs. Normal:**<br>
 
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-$\text{Proporcion} = \frac {\text{promedio qTime [priority=Normal]}}{\text{Promedio qTime [priority=Alta]}}$ <br>
+$\text{Proporcion} = \frac {\text{Promedio qTime [priority=Normal]}}{\text{Promedio qTime [priority=Alta]}}$ <br>
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
 $\text{Proporcion} =1.43$
 
