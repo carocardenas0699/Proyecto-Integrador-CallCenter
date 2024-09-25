@@ -18,15 +18,15 @@ $\text{Porcentaje [outcome=AGENT]}= 81.89%$ <br>
 - **Proporción de tiempo en cola de clientes de proporción Alta vs. Normal:**<br>
 
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-$\text{Proporcion} = \frac {\text{promedio qTime [priority=Normal]}}{\text{promedio qTime [priority=Alta]}}$ <br>
+$\text{Proporcion} = \frac {\text{promedio qTime [priority=Normal]}}{\text{Promedio qTime [priority=Alta]}}$ <br>
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
 $\text{Proporcion} =1.43$
 
 - **Tiempo promedio en servicio:**<br>
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-$\text{promedio serTime [outcome=AGENT] }=  \frac{\sum {serTime[outcome=AGENT]}}{N^o \text{ total de registros}}$ <br>
+$\text{Promedio serTime [outcome=AGENT] }=  \frac{\sum {serTime[outcome=AGENT]}}{N^o \text{ total de registros}}$ <br>
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-$\text{promedio serTime [outcome=AGENT]} = 3.13 \text{ minutos}$
+$\text{Promedio serTime [outcome=AGENT]} = 3.13 \text{ minutos}$
 
 ## Preguntas propuestas:
 **1.** **¿Cuál es el nivel de servicio para los clientes Prioritarios? ¿Damos un mejor servicio que a los clientes normales?** <br>
